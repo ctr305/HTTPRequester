@@ -8,13 +8,13 @@ import java.net.http.HttpResponse;
 
 public class ClientHTTP {
 
-    public static HttpResponse sendGETRequest(String url) throws IOException, InterruptedException {
+    public static HttpResponse<byte[]> sendGETRequest(String url) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .build();
 
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
 
         if (response.statusCode() == 200) {
             System.out.println("Request successful");

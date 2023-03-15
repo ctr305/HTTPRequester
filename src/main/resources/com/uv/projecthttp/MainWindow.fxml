@@ -8,8 +8,10 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
 <AnchorPane maxHeight="1920.0" maxWidth="1080.0" minHeight="480.0" minWidth="720.0" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uv.projecthttp.MainWindow">
    <children>
@@ -43,6 +45,8 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <TextArea fx:id="bodyField" editable="false" layoutX="13.0" layoutY="15.0" prefHeight="310.0" prefWidth="693.0" promptText="Cuerpo de la respuesta aparecerá aquí..." />
+                        <WebView fx:id="webViewBody" layoutX="14.0" layoutY="14.0" prefHeight="313.0" prefWidth="692.0" />
+                        <ImageView fx:id="imageBody" fitHeight="312.0" fitWidth="692.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
                      </children></AnchorPane>
             </content>
           </Tab>
